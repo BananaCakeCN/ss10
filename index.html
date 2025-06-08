@@ -134,66 +134,25 @@
             button{
                 font-size: 21px;
             }
+            #mapcn{
+                    height: calc(100% - 20px);
+                    position: absolute;
+                    right: 0;
+                    top: 0;
+                    margin: 10px;
+            }
         </style>
     </head>
     <body>
-        <div class="page" pn="6">
-            <div style="margin: 0 20px;">
-                <h1>Thanks for listening</h1>
-                <p>Bibliography:</p>
-                <div style="border: #000 solid 2px; background-color: #fff; width: 500px; padding: 20px 50px;">
-                    <p>刘金香. (1986 September 29). 谈近亲结婚的危害[J]. <em>人口研究</em>, 1986, 10(5): 55, 58. <a target="_blank" href="https://rkyj.ruc.edu.cn/CN/Y1986/V10/I5/55">https://rkyj.ruc.edu.cn/CN/Y1986/V10/I5/55</a></p>
-                    <p>王弘. (2024 June 12). 近婚系数(Coefficient Of Inbreeding). <em>生物阁</em>. <a target="_blank" href="https://www.biolab.wang/genetics/coi">https://www.biolab.wang/genetics/coi</a></p>
-                    <p>张学 & 曹丽华. (2023 April 7). 常染色体显性遗传. <em>中国大百科全书</em>. <a target="_blank" href="https://www.zgbk.com/ecph/words?SiteID=1&Name=%E5%B8%B8%E6%9F%93%E8%89%B2%E4%BD%93%E6%98%BE%E6%80%A7%E9%81%97%E4%BC%A0">https://www.zgbk.com/ecph/words?SiteID=1&Name=常染色体显性遗传</a></p>
-                </div>
-            </div>
-        </div>
-        <div class="page" pn="5">
-            <div class="areahold">
-                <div style="margin: 0 20px;">
-                    <h1>Inbreeding simulator</h1>
-                    <button id="generate">Generate a family</button>
-                    <p id="text"></p>
-                </div>
-            </div>
-        </div>
-        <div class="page" pn="4">
-            <div style="margin: 0 500px 0 20px; float: right; max-height: 100%; overflow-y: scroll;">
-                <h1>Coefficient of Inbreeding</h1>
-                <h3>About Coefficient of Inbreeding</h3>
-                <p>The problem related to inbreeding always involve the calculation of the Coefficient of Inbreeding.</p>
-                <p>Looking at the image. What is the Coefficient of Inbreeding of IV1 (represented by a 45% rotated rectangle) if his(her) grandfather (father's father) is also his great-grandfather (mother's father's father)?</p>
-                <h3>How to calculate Coefficient of Inbreeding (Only consider autosome)</h3>
-                <p>There are four cases of the offspring getting both homozygous genes from the same ancestor. The cases are A<exponent>1</exponent> (referring to the red gene), A<exponent>2</exponent> (referring to the blue gene), B<exponent>1</exponent> (referring to the green gene), B<exponent>2</exponent> (referring to the purple gene).</p>
-                <p>For each cases, the routes of inheriting are passing to II1 (father), IV1(self); and II2 (mother's father), III1 (mother), IV1(self). Those are total of 5 steps, each steps has a rate of inheriting of 50% (50% chances on failing to inherit), so the final possibility is 50% ^ 5 = 3.125%. There are totol of 4 cases, so the Coefficient of Inbreeding is 3.125% * 4 = 12.5%.</p>
-                <h3>Formula of Coefficient of Inbreeding</h3>
-                <p>To get the formula, we can break down the equation we just used.</p>
-                <p>50% ^ 5 * 4 = 12.5%</p>
-                <p>50% is the inherit rate for autosome, 5 are the steps for one loop (two routes that achieve to the same offspring, like a electic circuit), 4 are the loops.</p>
-                <p>However, not every scenario has the same steps for each loop. For example, if you want to calculate the Coefficient of Inbreeding for a random European royal family from the middle ages, things get complicated. The target offspirng's parents might not have the same parent. The father's mother and the mother's father are from the same mother, but different father. And one of the father and the mother belongs to the same parent. The steps of each route is different.</p>
-                <p>So we have to add up the steps individually for each route</p>
-                <p><em>F</em> = 50%<expu>k(1)</expu> + 50%<expu>k(2)</expu> + ... + 50%<expu>k(n)</expu></p>
-                <p>Where k(<em>i</em>) represents the individuals (steps) on the <em>i</em> th route.</p>
-                <p>Simplify with mathematics summation:</p>
-                <p><em>F</em> = Σ (<em>i</em>=1 -> <em>n</em>) 50%<expu>k(<em>i</em>)</expu></p>
-                <p>Where n represents the last route index.</p>
-                <p>If the ancestor was borned by inbreeding, you will then have to add his(her) Coefficient of Inbreeding.</p>
-                <p><em>F</em> = Σ (<em>i</em>=1 -> <em>n</em>) 50%<expu>k(<em>i</em>)</expu> * (1 + <em>Fi</em>)</p>
-            </div>
-        </div>
-        <div class="page" pn="3">
-            <div style="margin: 0 20px; max-height: 100%; overflow-y: scroll;">
-                <h1>Statistics explaining why is inbreeding harmful <empty style="color: #3060ff; cursor: pointer;">[1]</empty></h1>
-                <p>Accoding to the article, the possibility of a person finding a partner who carries the same genetic disease is very rare. It is 1‱ to below 10%. As mentioned, the rate of offspring having the genetic disorder is very low.</p>
-                <p>However, if the partner has a blood relationship with the person, it would be very different. Since they have the same ancestor, they might inherit the same disease from their ancestor. So they will have a higher rate of carring the same disease.</p>
-                <p>A person does not only have one recessive disease gene, but 4 - 5 types on average. So the offspring of inbreeding is most likely defective.</p>
-                <p>The death rate of inbreeding offspring dying before the age of 20 is 8.1%, 8 times higher than normal offspring.</p>
-            </div>
-        </div>
         <div class="page" pn="2">
             <div style="margin: 0 20px;">
                 <h1>China before July 7 Incident</h1>
-
+                <object id="mapcn" data="ROC37.svg" type="image/svg+xml"></object>
+                <div id="mapLeftOut">
+                    <p style="font-size: 18px;">Lines in <b>black</b>: Legal boundaries for the Republic of China (ROC) in 1937</p>
+                    <p style="font-size: 18px;">Lines in <b style="color: blue;">blue</b>: Differences between 1937 and current (2025) legal boundaries for the Republic of China (ROC)</p>
+                    <p style="font-size: 18px;">Lines in <b style="color: red;">red</b>: Current legal boundaries differences between the Republic of China (ROC) and the People's Republic of China (PRC)</p>
+                </div>
             </div>
         </div>
         <div class="page" pn="1">
@@ -217,15 +176,13 @@
         </div>
         <script>
             const sleep = ms => new Promise(res => setTimeout(res, ms));
+            var mapi = 0;
             document.onkeydown = async function(event){
+                document.getElementById('mapLeftOut').style.width = 'calc(100% - ' + (document.getElementById('mapcn').offsetWidth + 20) + 'px)';
                 if(event.key == 'q' && document.getElementsByClassName('page').length > 1){
                     document.getElementsByClassName('page')[document.getElementsByClassName('page').length - 1].style.animation = '0.3s ease close forwards';
                     if(document.getElementsByClassName('page')[document.getElementsByClassName('page').length - 1].getAttribute('pn') == '1'){
-                        fetch('ROC37.svg', {mode: "no-cors"})
-                        .then(response => response.text())//new DOMParser().parseFromString(response.text(), 'image/svg+xml'))
-                        .then(data => {
-                            console.log(data);
-                        })
+                        //document.getElementById('mapLeftOut').style.width = 'calc(100% - ' + (document.getElementById('mapcn').offsetWidth + 20) + 'px)';
                         /*const window = document.createElement('div');
                         window.id = 'graph';
                         document.body.append(window);
@@ -242,6 +199,13 @@
                     }
                     await sleep(500);
                     document.getElementsByClassName('page')[document.getElementsByClassName('page').length - 1].remove();
+                }else if(event.key == ' ' && document.getElementsByClassName('page')[document.getElementsByClassName('page').length - 1].getAttribute('pn') == '2'){
+                    console.log(document.getElementById('mapcn').contentDocument)
+                    for(var i = 0; i < document.getElementById('mapcn').contentDocument.getElementsByClassName(mapi).length; i++){
+                        console.log(document.getElementById('mapcn'))
+                        document.getElementById('mapcn').contentDocument.getElementsByClassName(mapi)[i].setAttribute('display', '');
+                    }
+                    mapi++;
                 }
             }
         </script>
