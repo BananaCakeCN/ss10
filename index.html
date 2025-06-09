@@ -200,9 +200,7 @@
                     await sleep(500);
                     document.getElementsByClassName('page')[document.getElementsByClassName('page').length - 1].remove();
                 }else if(event.key == ' ' && document.getElementsByClassName('page')[document.getElementsByClassName('page').length - 1].getAttribute('pn') == '2'){
-                    console.log(document.getElementById('mapcn').contentDocument)
                     for(var i = 0; i < document.getElementById('mapcn').contentDocument.getElementsByClassName(mapi).length; i++){
-                        console.log(document.getElementById('mapcn'))
                         document.getElementById('mapcn').contentDocument.getElementsByClassName(mapi)[i].setAttribute('display', '');
                     }
                     mapi++;
