@@ -141,17 +141,34 @@
                     top: 0;
                     margin: 10px;
             }
+            #mapLeftOut{
+            	overflow-y: scroll;
+    			height: calc(100% - 10px);
+    			position: absolute;
+            }
         </style>
     </head>
     <body>
+    	<div class="page" pn="3">
+            <div style="margin: 0 20px;">
+                <div id="photoLeftOut">
+                	<h1>July 7 Incident </h1>
+                    <p style="font-size: 15px;">Lines in <b>black</b>: Legal boundaries for the Republic of China (ROC) in 1937</p>
+                    <p style="font-size: 15px;">Lines in <b style="color: blue;">blue</b>: Differences between 1937 and current (2025) legal boundaries for the Republic of China (ROC)</p>
+                    <p style="font-size: 15px;">Lines in <b style="color: red;">red</b>: Current legal boundaries differences between the Republic of China (ROC) and the People's Republic of China (PRC)</p>
+                    <p>During the 1930s, Japanese armies and other western military forces were settled around Beijing. China was under the civil war. The warlords were fighting against Nanjing Nationalist and other warlords. Most of the people weren’t educated, which made the ideas of Nationalism harder to spread. People were extremely poor, 3-7 million of people per year were dying due to the starving. </p>
+                </div>
+            </div>
+        </div>
         <div class="page" pn="2">
             <div style="margin: 0 20px;">
-                <h1>China before July 7 Incident</h1>
                 <object id="mapcn" data="ROC37.svg" type="image/svg+xml"></object>
                 <div id="mapLeftOut">
-                    <p style="font-size: 18px;">Lines in <b>black</b>: Legal boundaries for the Republic of China (ROC) in 1937</p>
-                    <p style="font-size: 18px;">Lines in <b style="color: blue;">blue</b>: Differences between 1937 and current (2025) legal boundaries for the Republic of China (ROC)</p>
-                    <p style="font-size: 18px;">Lines in <b style="color: red;">red</b>: Current legal boundaries differences between the Republic of China (ROC) and the People's Republic of China (PRC)</p>
+                	<h1>China before July 7 Incident</h1>
+                    <p style="font-size: 15px;">Lines in <b>black</b>: Legal boundaries for the Republic of China (ROC) in 1937</p>
+                    <p style="font-size: 15px;">Lines in <b style="color: blue;">blue</b>: Differences between 1937 and current (2025) legal boundaries for the Republic of China (ROC)</p>
+                    <p style="font-size: 15px;">Lines in <b style="color: red;">red</b>: Current legal boundaries differences between the Republic of China (ROC) and the People's Republic of China (PRC)</p>
+                    <p>During the 1930s, Japanese armies and other western military forces were settled around Beijing. China was under the civil war. The warlords were fighting against Nanjing Nationalist and other warlords. Most of the people weren’t educated, which made the ideas of Nationalism harder to spread. People were extremely poor, 3-7 million of people per year were dying due to the starving. </p>
                 </div>
             </div>
         </div>
@@ -161,7 +178,6 @@
                 <h3>The statement of “World War II started on September 1st, 1939” might not be a fact, but an opinion.</h3>
                 <h3>Some historians date the beginning of the World War II to the July 7 Incident on July 7th, 1937. This event marks the start of war on the Pacific.</h3>
                 <h3>A few historians, such as Antony Beevor, date the beginning of the World War II to the Manchuria Incident on September 18th, 1931. Which is 8 years earlier than the date of Germany invaded Poland.</h3>
-                <h3>The answer to the start date of World War II could be September 1st, 1939. But the answer to the start date for the Pacific side of World War II must not be September 1st, 1939, as Germany invading Poland does not affect the war in the far east.</h3>
             </div>
         </div>
         <div class="page" pn="0">
@@ -178,7 +194,7 @@
             const sleep = ms => new Promise(res => setTimeout(res, ms));
             var mapi = 0;
             document.onkeydown = async function(event){
-                document.getElementById('mapLeftOut').style.width = 'calc(100% - ' + (document.getElementById('mapcn').offsetWidth + 20) + 'px)';
+                document.getElementById('mapLeftOut').style.width = 'calc(100% - ' + (document.getElementById('mapcn').offsetWidth + 40) + 'px)';
                 if(event.key == 'q' && document.getElementsByClassName('page').length > 1){
                     document.getElementsByClassName('page')[document.getElementsByClassName('page').length - 1].style.animation = '0.3s ease close forwards';
                     if(document.getElementsByClassName('page')[document.getElementsByClassName('page').length - 1].getAttribute('pn') == '1'){
